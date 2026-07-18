@@ -280,7 +280,7 @@ export const Home: React.FC = () => {
           <div className="flex justify-between items-start">
             <div>
               <span className={`text-[10px] font-mono tracking-widest uppercase ${tier === 'Gold Member' ? 'text-slate-400' : 'text-white/70'}`}>
-                REWARD BALANCE
+                REWARD BALANCE • POWERED BY REWARDSTACC
               </span>
               <div className="flex items-baseline gap-1.5 mt-1.5">
                 <span className={`text-5xl font-display font-black tracking-tight ${tier === 'Gold Member' ? 'text-amber-400' : 'text-white'}`}>
@@ -367,7 +367,7 @@ export const Home: React.FC = () => {
           <motion.div
             whileHover={{ y: -3 }}
             onClick={() => handleCategoryClick('Shopping')}
-            className="bg-white rounded-3xl p-4 border border-slate-100 shadow-2xs flex flex-col justify-between h-28 cursor-pointer relative overflow-hidden group"
+            className="bg-white rounded-3xl p-4 border border-slate-100 shadow-2xs flex flex-col justify-between h-32 cursor-pointer relative overflow-hidden group"
           >
             <div className="absolute right-[-15%] top-[-10%] w-12 h-12 bg-[#5B3DF5]/5 rounded-full blur-lg pointer-events-none group-hover:bg-[#5B3DF5]/10 transition-colors" />
             <div className="h-9 w-9 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center">
@@ -376,6 +376,7 @@ export const Home: React.FC = () => {
             <div>
               <span className="block text-xs font-display font-black text-slate-900 leading-tight">SHOPPING</span>
               <span className="block text-[8px] text-slate-400 font-mono tracking-wider uppercase mt-0.5 font-bold">Buy Products</span>
+              <span className="block text-[7px] text-[#5B3DF5] font-mono tracking-wider uppercase mt-1.5 font-black">POWERED BY SHOPSTACC</span>
             </div>
           </motion.div>
 
@@ -383,7 +384,7 @@ export const Home: React.FC = () => {
           <motion.div
             whileHover={{ y: -3 }}
             onClick={() => handleCategoryClick('Travel')}
-            className="bg-white rounded-3xl p-4 border border-slate-100 shadow-2xs flex flex-col justify-between h-28 cursor-pointer relative overflow-hidden group"
+            className="bg-white rounded-3xl p-4 border border-slate-100 shadow-2xs flex flex-col justify-between h-32 cursor-pointer relative overflow-hidden group"
           >
             <div className="absolute right-[-15%] top-[-10%] w-12 h-12 bg-emerald-500/5 rounded-full blur-lg pointer-events-none group-hover:bg-emerald-500/10 transition-colors" />
             <div className="h-9 w-9 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
@@ -392,6 +393,7 @@ export const Home: React.FC = () => {
             <div>
               <span className="block text-xs font-display font-black text-slate-900 leading-tight">TRAVEL</span>
               <span className="block text-[8px] text-slate-400 font-mono tracking-wider uppercase mt-0.5 font-bold">Book Flights/Hotels</span>
+              <span className="block text-[7px] text-emerald-600 font-mono tracking-wider uppercase mt-1.5 font-black">POWERED BY TRAVELSTACC</span>
             </div>
           </motion.div>
 
@@ -399,7 +401,7 @@ export const Home: React.FC = () => {
           <motion.div
             whileHover={{ y: -3 }}
             onClick={() => handleCategoryClick('Gift Cards')}
-            className="bg-white rounded-3xl p-4 border border-slate-100 shadow-2xs flex flex-col justify-between h-28 cursor-pointer relative overflow-hidden group"
+            className="bg-white rounded-3xl p-4 border border-slate-100 shadow-2xs flex flex-col justify-between h-32 cursor-pointer relative overflow-hidden group"
           >
             <div className="absolute right-[-15%] top-[-10%] w-12 h-12 bg-amber-400/5 rounded-full blur-lg pointer-events-none group-hover:bg-amber-400/10 transition-colors" />
             <div className="h-9 w-9 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center">
@@ -408,6 +410,7 @@ export const Home: React.FC = () => {
             <div>
               <span className="block text-xs font-display font-black text-slate-900 leading-tight">GIFT CARDS</span>
               <span className="block text-[8px] text-slate-400 font-mono tracking-wider uppercase mt-0.5 font-bold">Buy Gift Cards</span>
+              <span className="block text-[7px] text-amber-600 font-mono tracking-wider uppercase mt-1.5 font-black">POWERED BY GIFTSTACC</span>
             </div>
           </motion.div>
 

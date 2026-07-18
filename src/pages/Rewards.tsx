@@ -81,8 +81,15 @@ export const Rewards: React.FC = () => {
       
       {/* Header */}
       <div className="bg-white px-6 pt-6 pb-4 border-b border-slate-100 sticky top-0 z-30 shadow-xs">
-        <h1 className="text-xl font-display font-black tracking-tight text-slate-900">Redeem Rewards</h1>
-        <p className="text-xs text-slate-400 mt-0.5">Use your accumulated points for premium partner vouchers</p>
+        <div className="flex justify-between items-start">
+          <div>
+            <h1 className="text-xl font-display font-black tracking-tight text-slate-900">Redeem Rewards</h1>
+            <p className="text-xs text-slate-400 mt-0.5">Use your accumulated points for premium partner vouchers</p>
+          </div>
+          <span className="text-[8px] font-mono font-black text-[#5B3DF5] uppercase bg-indigo-50 px-2 py-1 rounded-md border border-indigo-100/80 flex-none mt-1">
+            POWERED BY REWARDSTACC
+          </span>
+        </div>
 
         {/* Current points balance */}
         <div className="mt-4 p-4 rounded-2xl bg-slate-50 border border-slate-100 flex justify-between items-center">

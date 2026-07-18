@@ -55,9 +55,14 @@ export const Wallet: React.FC = () => {
         >
           <ArrowLeft className="w-5 h-5 text-white" />
         </button>
-        <span className="font-display font-black text-xs tracking-widest uppercase text-slate-300">
-          SmartRewards Pass
-        </span>
+        <div className="flex flex-col items-center">
+          <span className="font-display font-black text-xs tracking-widest uppercase text-slate-350">
+            SmartRewards Pass
+          </span>
+          <span className="text-[7.5px] text-indigo-400 font-mono tracking-widest uppercase mt-0.5 font-bold">
+            POWERED BY REWARDSTACC
+          </span>
+        </div>
         <button className="h-10 w-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 hover:bg-white/10 transition-colors cursor-pointer">
           <HelpCircle className="w-5 h-5 text-slate-400" />
         </button>

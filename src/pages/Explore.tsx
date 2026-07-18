@@ -626,8 +626,14 @@ export const Explore: React.FC = () => {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
-                className="space-y-6"
+                className="space-y-4"
               >
+                {/* Powered By Header */}
+                <div className="flex justify-between items-center bg-emerald-50/70 border border-emerald-100 px-5 py-3 rounded-2xl">
+                  <span className="text-[11px] text-emerald-900 font-display font-black uppercase tracking-wider">Travel Booking Directory</span>
+                  <span className="text-[9px] text-emerald-600 font-mono font-black uppercase tracking-widest">POWERED BY TRAVELSTACC</span>
+                </div>
+
                 {/* Search Form Card */}
                 <div className="bg-white rounded-[32px] border border-slate-100 p-5 shadow-xs">
                   {/* Tab Selector: Flights vs Hotels */}
@@ -983,6 +989,12 @@ export const Explore: React.FC = () => {
                 exit={{ opacity: 0, y: -10 }}
                 className="space-y-4"
               >
+                {/* Powered By Header */}
+                <div className="flex justify-between items-center bg-amber-50/70 border border-amber-100 px-5 py-3 rounded-2xl">
+                  <span className="text-[11px] text-amber-950 font-display font-black uppercase tracking-wider">Eon Instant Vouchers</span>
+                  <span className="text-[9px] text-amber-700 font-mono font-black uppercase tracking-widest">POWERED BY GIFTSTACC</span>
+                </div>
+
                 <div className="grid grid-cols-1 gap-4">
                   {REWARDS_ITEMS.filter(item => {
                     if (searchQuery) {
@@ -1054,8 +1066,14 @@ export const Explore: React.FC = () => {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
-                className="space-y-5"
+                className="space-y-4"
               >
+                {/* Powered By Header */}
+                <div className="flex justify-between items-center bg-indigo-50/70 border border-indigo-100 px-5 py-3 rounded-2xl">
+                  <span className="text-[11px] text-indigo-950 font-display font-black uppercase tracking-wider">Premium Eon Catalog</span>
+                  <span className="text-[9px] text-[#5B3DF5] font-mono font-black uppercase tracking-widest">POWERED BY SHOPSTACC</span>
+                </div>
+
                 {/* Horizontal Subcategory filter list for Shopping */}
                 {selectedCategory === 'Shopping' && (
                   <div className="flex gap-2 overflow-x-auto no-scrollbar pb-1">
@@ -1224,7 +1242,12 @@ export const Explore: React.FC = () => {
                     <div className="flex justify-between items-center border-b border-white/10 pb-3">
                       <div className="flex items-center gap-1.5">
                         <Ticket className="w-4.5 h-4.5 text-amber-400" />
-                        <span className="font-display font-black text-[10px] tracking-widest uppercase">EON VOUCHER PASS</span>
+                        <div className="flex flex-col">
+                          <span className="font-display font-black text-[10px] tracking-widest uppercase">EON VOUCHER PASS</span>
+                          <span className="text-[7.5px] font-mono font-bold tracking-wider text-slate-400">
+                            {bookingType === 'giftcard' ? 'POWERED BY GIFTSTACC' : 'POWERED BY TRAVELSTACC'}
+                          </span>
+                        </div>
                       </div>
                       <span className="font-mono text-[9px] text-amber-400 font-bold uppercase tracking-wider">{bookingSuccessData.code}</span>
                     </div>
@@ -1284,9 +1307,18 @@ export const Explore: React.FC = () => {
                         </div>
                       )}
                       <div className="min-w-0 flex-1">
-                        <span className="text-[8px] font-mono font-black text-primary uppercase bg-indigo-50 px-2 py-0.5 rounded-md leading-none">
-                          {bookingType === 'flight' ? 'Vistara / Air India Flight' : bookingType === 'hotel' ? 'Taj / Leela Luxury Stay' : selectedBooking.category}
-                        </span>
+                        <div className="flex flex-wrap gap-1 items-center">
+                          <span className="text-[8px] font-mono font-black text-primary uppercase bg-indigo-50 px-2 py-0.5 rounded-md leading-none">
+                            {bookingType === 'flight' ? 'Vistara / Air India Flight' : bookingType === 'hotel' ? 'Taj / Leela Luxury Stay' : selectedBooking.category}
+                          </span>
+                          <span className={`text-[8px] font-mono font-black uppercase px-2 py-0.5 rounded-md leading-none ${
+                            bookingType === 'giftcard' 
+                              ? 'text-amber-700 bg-amber-50' 
+                              : 'text-emerald-700 bg-emerald-50'
+                          }`}>
+                            {bookingType === 'giftcard' ? 'POWERED BY GIFTSTACC' : 'POWERED BY TRAVELSTACC'}
+                          </span>
+                        </div>
                         <h4 className="font-display font-black text-xs text-slate-900 mt-1.5 leading-snug truncate">
                           {bookingType === 'flight' 
                             ? `Flight: ${selectedBooking.from} ➔ ${selectedBooking.to} (${selectedBooking.class})` 

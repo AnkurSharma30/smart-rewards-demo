@@ -143,9 +143,12 @@ export const ProductDetails: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
         
         {/* Category badge */}
-        <div className="absolute bottom-5 left-6 z-10 flex items-center gap-2">
+        <div className="absolute bottom-5 left-6 z-10 flex flex-wrap items-center gap-2">
           <span className="px-3 py-1 bg-white/90 backdrop-blur-md rounded-full text-[10px] font-mono font-bold uppercase text-slate-800 tracking-wider shadow-xs">
             {product.category}
+          </span>
+          <span className="px-3 py-1 bg-[#5B3DF5] text-white rounded-full text-[10px] font-mono font-black tracking-widest uppercase shadow-xs">
+            POWERED BY SHOPSTACC
           </span>
           {product.isPremium && (
             <span className="px-3 py-1 bg-slate-950 text-amber-400 rounded-full text-[10px] font-mono font-bold uppercase tracking-wider shadow-xs">
