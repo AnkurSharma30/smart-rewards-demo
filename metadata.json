@@ -1,0 +1,6 @@
+{
+  "name": "SmartRewards",
+  "description": "A premium loyalty and rewards marketplace displaying personalized experiences that adapt to your journey.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
